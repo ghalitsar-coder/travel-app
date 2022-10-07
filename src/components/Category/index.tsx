@@ -36,7 +36,7 @@ function CategoryContent({}) {
     },
   ];
   return (
-    <div className="flex flex-wrap gap-y-4 text-gray-900">
+    <div className="grid gap-5 xl:grid-cols-4 md:grid-cols-2 grid-cols-1 text-gray-900">
       {categories.map((item: ICatProps, idx: number) => (
         <CardContent key={item.title} {...item} idx={idx} />
       ))}
@@ -70,7 +70,7 @@ function CardContent({ title, text, imageCat: ImageCat, idx }) {
     }
   };
   return (
-    <div className="flex-1 basis-3/12 px-8">
+    <div className="">
       <div className="relative transition-all duration-300 group  hover:shadow-great grid place-items-center text-center bg-white rounded-[36px]   ">
         <div className="absolute transition-all duration-300 opacity-0 group-hover:opacity-100 -z-10 bottom-12 group-hover:bottom-6 left-12 group-hover:left-6 -translate-x-1/2 translate-y-1/2 bg-accent-2 rounded-tl-3xl rounded-br-lg w-28 h-28   "></div>
         <div className="relative mb-6 inline-flex h-28">
@@ -109,14 +109,17 @@ function CardContent({ title, text, imageCat: ImageCat, idx }) {
 }
 
 function Category({}) {
-
   return (
     <section className="mb-32">
       <div className="max-w-7xl mx-auto relative px-4 ">
         <div className="absolute w-36 h-36 lg:-right-10 -top-10 ">
           <DecorePlus1 className="decore-plus-style-1" />
         </div>
-        <HeaderContent className='' title="Category" subtitle="We Offer Best Services" />
+        <HeaderContent
+          className=""
+          title="Category"
+          subtitle="We Offer Best Services"
+        />
         <CategoryContent />
       </div>
     </section>

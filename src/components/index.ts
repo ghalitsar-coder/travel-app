@@ -5,4 +5,6 @@ export { default as TopSelling } from "./TopSelling";
 export { default as HeaderContent } from "./HeaderContent";
 export { default as Booking } from "./Booking";
 export { default as Testimonials } from "./Testimonials";
+export { default as Clients } from "./Clients";
+export { default as Subscription } from "./Subscription";
 export { default as Footer } from "./Footer";

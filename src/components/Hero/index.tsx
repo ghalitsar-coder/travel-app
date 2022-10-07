@@ -16,7 +16,7 @@ function HeroBanner({}) {
       </span>
       <div className="w-96 h-96 bg-accent-3/50 rounded-full blur-3xl absolute -left-80 -top-10 " />
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex">
+        <div className="flex lg:flex-nowrap flex-wrap-reverse">
           <LeftSection />
           <RightSection />
         </div>
@@ -28,16 +28,16 @@ export default HeroBanner;
 
 function LeftSection({}) {
   return (
-    <div className="w-6/12 pt-52 ">
-      <h1 className="text-accent-2 font-bold text-xl uppercase mb-6">
+    <div className="lg:w-6/12 w-full md:pt-52  ">
+      <h1 className="text-accent-2 font-bold xl:text-xl text-lg uppercase mb-6">
         Best Destinations around the world
       </h1>
-      <h2 className="text-gray-900 font-serif text-[84px] leading-[89px] tracking-tighter mb-8 ">
+      <h2 className="text-gray-900 font-serif text-5xl xl:text-[84px] leading-snug xl:leading-[89px] tracking-tighter mb-8 ">
         Travel,{" "}
         <span className="relative ">
           {" "}
           enjoy
-          <span className="absolute left-0 top-full -mt-8 -ml-9 -z-10 ">
+          <span className="absolute left-0 top-full xl:-mt-8 -ml-9 -z-10 ">
             <DecoreTextUnderline className="w-96 h-3 fill-accent-2 " />
           </span>
         </span>{" "}
@@ -75,9 +75,9 @@ function PlaneImage({ src, planeClass }: PlaneProps) {
 
 function RightSection({}) {
   return (
-    <div className="w-[784px] h-[764px] pt-24 relative">
+    <div className="md:w-[784px] w-full h-[764px] pt-40 md:pt-24 relative">
       <PlaneImage src="/images/plane.png" planeClass={"top-32 left-8  z-30"} />
-      <div className="relative z-20 -translate-x-16 ">
+      <div className="relative z-20 -translate-x-6 lg:-translate-x-20 ">
         <Image
           priority
           layout="responsive"

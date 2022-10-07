@@ -45,7 +45,7 @@ const Booking = () => {
   return (
     <section id="booking" className="mb-28">
       <div className="max-w-7xl mx-auto relative px-4 ">
-        <div className="flex">
+        <div className="grid grid-cols-1  gap-5 xl:place-content-between place-content-center xl:grid-cols-2 ">
           <LeftSection steps={steps} />
           <RightSection />
         </div>
@@ -74,7 +74,7 @@ function ListItems({ title, subText, icon: Icon, accent }) {
 
 function LeftSection({ steps }) {
   return (
-    <div className="w-6/12 pl-8 pr-20">
+    <div className=" md:pl-8 md:pr-20">
       <HeaderContent
         title="Easy and fast"
         subtitle="Book your next trip 
@@ -93,8 +93,8 @@ function LeftSection({ steps }) {
 function RightSection({}) {
   const icons: ReactNode[] = [<FaLeaf />, <BsMap />, <RiSendPlaneFill />];
   return (
-    <div className="w-5/12 flex items-center justify-center ">
-      <div className="w-[370px] group relative ">
+    <div className=" flex items-center justify-center ">
+      <div className="md:w-[370px] w-full group relative ">
         <div className="w-60 h-60 rounded-full blur-3xl absolute z-10 -top-10 -right-10 bg-accent-7/40 "></div>
         <PopUp />
         <div className="bg-white rounded-2xl w-full h-full relative z-20 shadow-great pt-4 pb-5  ">
@@ -140,7 +140,7 @@ function RightSection({}) {
 
 function PopUp({}) {
   return (
-    <div className="absolute opacity-0 transition-all duration-300 group-hover:opacity-100 bottom-16 right-0 translate-x-1/2 bg-white rounded-2xl w-[263px] z-30 shadow-great p-4 pr-7 ">
+    <div className="absolute opacity-0 hidden md:block transition-all duration-300 group-hover:opacity-100 bottom-16 right-0 translate-x-1/2 bg-white rounded-2xl w-[263px] z-30 shadow-great p-4 pr-7 ">
       <div className="flex">
         <span className="w-12 h-12 overflow-hidden rounded-full flex-none mr-3 ">
           <Image

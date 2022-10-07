@@ -59,15 +59,15 @@ const Testimonials = () => {
   );
 
   return (
-    <section id="testimonials" className="mb-8">
+    <section id="testimonials" className="lg:mb-52 mb-96">
       <div className="max-w-7xl mx-auto relative px-4 ">
-        <div className="flex">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 ">
           <LeftSection
             currentIndex={currentIndex}
             swiperRef={swiperRef}
             items={items}
           />
-          <div className="w-6/12 flex items-center justify-center relative  ">
+          <div className=" flex items-center justify-center relative  ">
             <div className="absolute -inset-10 -top-20 ">
               <Swiper
                 modules={[
@@ -122,7 +122,7 @@ const Testimonials = () => {
               </Swiper>
             </div>
           </div>
-          <div className="w-1/12   flex items-center justify-center ">
+          {/* <div className="  hidden md:flex items-center justify-center ">
             <div className="flex  flex-col  ">
               <button
                 type="button"
@@ -145,7 +145,7 @@ const Testimonials = () => {
                 <MdKeyboardArrowDown className="pointer-events-none text-2xl  " />
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
@@ -156,7 +156,7 @@ export default Testimonials;
 
 function LeftSection({ items, currentIndex, swiperRef }) {
   return (
-    <div className="w-6/12 pl-8 pr-20 ">
+    <div className=" pl-8 lg:pr-20 mb-20 lg:mb-0 z-20 ">
       <HeaderContent
         title="Testimonials"
         subtitle="What people say about Us."

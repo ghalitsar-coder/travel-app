@@ -35,14 +35,14 @@ const TopSelling = () => {
     },
   ];
   return (
-    <section id="top-selling" className='mb-28'>
+    <section id="top-selling" className="mb-28">
       <div className="max-w-7xl mx-auto relative px-4 ">
         <HeaderContent
           className=""
           title="Top Selling"
           subtitle="Top Destinations"
         />
-        <div className="flex flex-wrap relative pr-10  ">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 place-content-center gap-5 relative md:pr-10  ">
           <div className="absolute w-[96px] h-[252px] bottom-10 right-0 ">
             <DecoreSwirl1 className="stroke-gray-500" />
           </div>
@@ -59,7 +59,7 @@ export default TopSelling;
 
 function DestinationCard({ imgSrc, place, price, time }) {
   return (
-    <div className="flex-initial basis-4/12 px-4 relative z-20  ">
+    <div className=" px-4  z-20  ">
       <div className="rounded-3xl pb-10 shadow-great bg-white flex flex-col ">
         <div className="rounded-tr-3xl rounded-tl-3xl overflow-hidden relative h-96 ">
           <Image objectFit="cover" layout="fill" src={imgSrc} />
