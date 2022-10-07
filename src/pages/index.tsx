@@ -20,7 +20,19 @@ const Home: NextPage = () => {
         <title>Jadoo</title>
         <meta name="description" content="Jadoo Travel App" />
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          property="og:url"
+          content="https://ghalitsardev-travel-app.vercel.app"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Jadoo" />
+        <meta
+          property="og:description"
+          content="travel app, life app, aplikasi jalan-jalan, pesan guid, dan sebagainya"
+        />
+        <meta property="og:image " content="Jadoo" />
       </Head>
+
       <div className="overflow-hidden">
         <Header />
         <HeroBanner />
